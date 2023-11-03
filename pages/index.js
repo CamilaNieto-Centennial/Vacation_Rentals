@@ -130,7 +130,7 @@ export function Home() {
               title="Beach Walk Resort"
               img="/images/miami_1.jpg"
               tag="8.5"
-              btn="ADD TO CART"
+              btn="VIEW DETAILS"
             />
           </SimpleGrid>
         </div>
