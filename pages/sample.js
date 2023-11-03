@@ -16,28 +16,41 @@ import {
     Button,
     MantineProvider,
     Container,
-    TextInput,
-    PasswordInput,
-    Checkbox,
-    useMantineTheme,
 } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
     full_container: {
-        height: `calc(100vh - 60px)`,
+        //height: `calc(100vh - 60px)`,
+        display: 'flex',
+        justifyContent: 'center', // Center horizontally
+        alignItems: 'center', // Center vertically
+        width: '100%',
+        height: `calc(90vh)`,
         position: 'relative',
     },
     container: {
         height: '100%'
-    }
+    },
+    video: {
+        maxWidth: '100%',
+        maxHeight: '100%',
+        width: 'auto',
+        height: 'auto',
+    },
 }));
 
 export function Data() {
     const { classes } = useStyles();
     return (
         <>
-        
-            <Title>Hey!</Title>
+
+            <div className={classes.full_container}>
+                <video autoPlay loop muted playsInline className={classes.video} ta="center">
+                    <source src={"https://st3v.idealista.pt/cb/fe/fb/hd_226992516.mp4"} type="video/mp4" />
+                </video>
+
+                {/* Your other content can go here */}
+            </div>
 
             {/*FOOTER*/}
             < Footer />

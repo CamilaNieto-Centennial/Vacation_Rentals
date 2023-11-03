@@ -3,10 +3,13 @@ import Layout, { siteTitle } from '../components/layout';
 import { UserContext, UserProvider } from '../components/userContext';
 import NavBar from '../components/navbar';
 import React, { useState } from 'react';
+import Intro from '../components/intro';
+import MainCard from '../components/card';
+import MenuItem from '../components/menuItem'
 import Footer from '../components/footer';
 import backgroundVideo from '../public/miami.mp4';
 
-import { createStyles, Overlay, Container, Title, Button, Text, rem } from '@mantine/core';
+import { createStyles, Overlay, Container, Title, Flex, Button, Text, rem, Image, Grid, SimpleGrid } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   hero: {
@@ -44,7 +47,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
     paddingBottom: `calc(${theme.spacing.xl} * 7)`,
-    paddingLeft: rem(80),
+    paddingLeft: rem(70),
     zIndex: 2,
     position: 'relative', // Make sure the content is positioned relative to the hero
     //background: 'transparent',
@@ -105,15 +108,33 @@ export function Home() {
         </video>
         <div className={classes.gradientOverlay} /> {/* Gradient overlay */}
         <div className={classes.container}>
-          <Title className={classes.title}>Where Every Connection Tells a Story</Title>
+          <Title className={classes.title}>Welcome To Ocean Miami</Title>
           <Text className={classes.description} size="xl" mt="xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Embrace the magic of Ocean Miami Vacation Rentals and experience the art of luxury living. Your dream vacation begins here.
           </Text>
           <Button variant="gradient" gradient={{ from: '#2B6CB0', to: '#1A365D' }} size="lg" radius="lg" className={classes.control}>
             Get started
           </Button>
         </div>
       </div>
+
+      {/*INTRO*/}
+      <Intro />
+
+      {/*MOST POPULAR RECIPES*/}
+      <Container size="lg" pb="xl">
+        <div className={classes.textContainer}>
+          {/*<Title order={2} ta="center" my="sm" className={`${classes.subtitle} ${classes.redLine}`}>Most Popular Vacation Rental</Title>*/}
+          <SimpleGrid  mt={3} spacing="xl" breakpoints={[{ maxWidth: 'md', cols: 2 }, { maxWidth: 'sm', cols: 1 }]}>
+            <MainCard
+              title="Beach Walk Resort"
+              img="/images/miami_1.jpg"
+              tag="8.5"
+              btn="ADD TO CART"
+            />
+          </SimpleGrid>
+        </div>
+      </Container>
 
       {/* FOOTER */}
       <Footer />

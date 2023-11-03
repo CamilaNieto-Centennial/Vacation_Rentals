@@ -97,11 +97,8 @@ export default function NavBar() {
                         <a href="/" className={classes.link}>
                             Home
                         </a>
-                        <a href="/login" className={classes.link}>
-                            Login
-                        </a>
-                        <a href="/register" className={classes.link}>
-                            Sign Up
+                        <a href="/sample" className={classes.link}>
+                            Our Best Property
                         </a>
                     </Group>
                     <Group spacing="1.5rem" className={classes.hiddenMobile}>
@@ -137,11 +134,8 @@ export default function NavBar() {
                     <a href="/" className={classes.link}>
                         Home
                     </a>
-                    <a href="/login" className={classes.link}>
-                        Login
-                    </a>
-                    <a href="/register" className={classes.link}>
-                        Sign Up
+                    <a href="/sample" className={classes.link}>
+                        Our Best Property
                     </a>
                     <ThemeSwitcher justify="left" style={classes.link} />
 
